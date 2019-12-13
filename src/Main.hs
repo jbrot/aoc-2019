@@ -6,9 +6,10 @@ import Options.Applicative
 import CLI
 import Day1
 import Day2
+import Day3
 
 days :: [AnyDay]
-days = [ day1, day2 ]
+days = [ day1, day2, day3 ]
 
 parser :: ParserInfo (IO ())
 parser = info (helper <*> p) (progDesc "This program is designed to solve the 2019 Advent of Code")
