@@ -2,13 +2,8 @@ module Day4 (day4) where
 
 import Options.Applicative (Parser, flag, short, long, help)
 
+import Common
 import CLI
-
-foldlDigits :: (a -> Int -> a) -> a -> Int -> a
-foldlDigits f a n
-  | n < 0     = foldlDigits f a (-n)
-  | n < 10    = f a n
-  | otherwise = f (foldlDigits f a (n `div` 10)) (n `mod` 10)
 
 hasAdjacentDigits :: Int -> Bool
 hasAdjacentDigits = snd . foldlDigits (\(n, b) n' -> (n', b || n == n')) (-1, False)
