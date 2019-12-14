@@ -183,7 +183,7 @@ star1 :: IO ()
 star1 = parseInput >>= runProgram (pure 1) (print) >>= const (pure ())
 
 star2 :: IO ()
-star2 = undefined
+star2 = parseInput >>= runProgram (pure 2) (print) >>= const (pure ())
 
 runStar :: Bool -> IO ()
 runStar False = star1
