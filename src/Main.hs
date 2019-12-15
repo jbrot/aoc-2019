@@ -13,9 +13,10 @@ import Day6
 import Day7
 import Day8
 import Day9
+import Day10
 
 days :: [AnyDay]
-days = [ day1, day2, day3, day4, day5, day6, day7, day8, day9 ]
+days = [ day1, day2, day3, day4, day5, day6, day7, day8, day9, day10 ]
 
 parser :: ParserInfo (IO ())
 parser = info (helper <*> p) (progDesc "This program is designed to solve the 2019 Advent of Code")
