@@ -25,6 +25,7 @@ dependencies:
 - ilist
 - optparse-applicative
 - parsec
+- PSQueue
 - transformers
 - unordered-containers
 - vector
